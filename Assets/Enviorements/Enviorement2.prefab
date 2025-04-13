@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4358185561025446122
 Transform:
   m_ObjectHideFlags: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4662785402988460580}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.124393, y: -259.9362, z: -9.436259}
+  m_LocalRotation: {x: 0.039743546, y: -0, z: -0, w: 0.99920994}
+  m_LocalPosition: {x: 34.124393, y: -259.9362, z: -6.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5543968067882515251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.555, y: 0, z: 0}
 --- !u!20 &4225803391699918177
 Camera:
   m_ObjectHideFlags: 0
@@ -92,6 +92,37 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4662785402988460580}
   m_Enabled: 1
+--- !u!1 &5202055124644047057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7728342968071275404}
+  m_Layer: 0
+  m_Name: EnemySpawnPoint
+  m_TagString: EnemySpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7728342968071275404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5202055124644047057}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.98750913, z: -0, w: 0.15756223}
+  m_LocalPosition: {x: 33.787, y: -261.542, z: 4.673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5543968067882515251}
+  m_LocalEulerAnglesHint: {x: 0, y: 521.869, z: 0}
 --- !u!1 &6257404472393718207
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +267,7 @@ Transform:
   - {fileID: 2460730961672455804}
   - {fileID: 8381106878424124882}
   - {fileID: 5709714155054080988}
+  - {fileID: 7728342968071275404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7960381659304408127

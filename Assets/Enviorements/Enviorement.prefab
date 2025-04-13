@@ -122,13 +122,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2638820795946143680}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08923131, y: -0.08127919, z: -0.0073076203, w: 0.99266213}
-  m_LocalPosition: {x: 51.759995, y: -259.69812, z: 28.865767}
+  m_LocalRotation: {x: -0.00045647944, y: 0.9794994, z: -0.011701535, w: 0.20110662}
+  m_LocalPosition: {x: 50.69, y: -259.13, z: 36.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2029927757101779776}
-  m_LocalEulerAnglesHint: {x: -5.5, y: 117.89, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.303, y: 156.791, z: -0.321}
 --- !u!20 &5769189119201306018
 Camera:
   m_ObjectHideFlags: 0
@@ -217,8 +217,40 @@ Transform:
   - {fileID: 7642029829161042781}
   - {fileID: 8784931918016978864}
   - {fileID: 5735960331901913769}
+  - {fileID: 5941070359983974440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6701582078210720469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941070359983974440}
+  m_Layer: 0
+  m_Name: EnemySpawnPoint
+  m_TagString: EnemySpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941070359983974440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701582078210720469}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.98497045, z: -0, w: 0.17272325}
+  m_LocalPosition: {x: 51.49, y: -260.679, z: 34.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2029927757101779776}
+  m_LocalEulerAnglesHint: {x: 0, y: 160.108, z: 0}
 --- !u!1 &7247810968386518522
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: EnviorementsPrefab
+  m_EditorClassIdentifier: 
+  m_GroupName: EnviorementsPrefab
+  m_GUID: 5a599e56488c8e746ab5a424f083bb9f
+  m_SerializeEntries:
+  - m_GUID: 55fa2750bdb6e6e43bb0999f15dffb34
+    m_Address: Assets/Enviorements/Enviorement2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c7916be32b4831459e123e056137170
+    m_Address: Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec070ae7f575643499c122a48843ad5b
+    m_Address: Assets/Enviorements/Enviorement.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1f8090203016be043b9c910c186dbfe1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 379a776fb22f3f140aaeaa8a09c8c5b8, type: 2}
+    - {fileID: 11400000, guid: 9997a1e257881524294992e3128b5817, type: 2}
