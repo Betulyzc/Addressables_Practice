@@ -1,0 +1,4 @@
+repository "Addressables_Practice/Addressables_Practice@18967369664818@cloud"
+  path "/"
+    br "/main"
+    co "/main"
