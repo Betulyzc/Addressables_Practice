@@ -15,7 +15,7 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private GameObject charactersPanel;
     [SerializeField] private GameObject choiceGameplay;
 
-    private string selectedEnvironment;
+    private EnvironmentType? selectedEnvironment;
     private AddressablesManager addressablesManager;
 
     void Start()
@@ -25,14 +25,14 @@ public class GameUIController : MonoBehaviour
         charactersPanel.SetActive(true);
         choiceGameplay.SetActive(false);
 
-        warriorButton.onClick.AddListener(() => OnCharacterSelected("Forest"));
-        archerButton.onClick.AddListener(() => OnCharacterSelected("Desert"));
+        warriorButton.onClick.AddListener(() => OnCharacterSelected(EnvironmentType.Forest));
+        archerButton.onClick.AddListener(() => OnCharacterSelected(EnvironmentType.Desert));
 
         letsFightButton.onClick.AddListener(() =>
         {
-            if (!string.IsNullOrEmpty(selectedEnvironment))
+            if (selectedEnvironment.HasValue)
             {
-                addressablesManager.LoadEnemy(selectedEnvironment);
+                addressablesManager.LoadEnemy(selectedEnvironment.Value);
                 letsFightButton.interactable = false;
             }
             else
@@ -42,11 +42,11 @@ public class GameUIController : MonoBehaviour
         });
     }
 
-    private void OnCharacterSelected(string environmentKey)
+    private void OnCharacterSelected(EnvironmentType environmentType)
     {
-        selectedEnvironment = environmentKey;
+        selectedEnvironment = environmentType;
 
-        addressablesManager.LoadEnvironment(environmentKey, () =>
+        addressablesManager.LoadEnvironment(environmentType, () =>
         {
             charactersPanel.SetActive(false);
             choiceGameplay.SetActive(true);

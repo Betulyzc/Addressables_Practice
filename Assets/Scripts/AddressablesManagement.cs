@@ -17,8 +17,8 @@ public class AddressablesManager : MonoBehaviour
     [SerializeField] private AssetReferenceGameObject enemyForestPrefab;
     [SerializeField] private AssetReferenceGameObject enemyDesertPrefab;
 
-    private Dictionary<string, AssetReferenceGameObject> envDict;
-    private Dictionary<string, AssetReferenceGameObject> enemyDict;
+    private Dictionary<EnvironmentType, AssetReferenceGameObject> envDict;
+    private Dictionary<EnvironmentType, AssetReferenceGameObject> enemyDict;
 
     private Transform currentEnemySpawnPoint;
     private GameObject currentEnemyInstance;
@@ -28,29 +28,29 @@ public class AddressablesManager : MonoBehaviour
     {
         envDict = new()
         {
-            { "Forest", forestEnvironmentPrefab },
-            { "Desert", desertEnvironmentPrefab }
+            { EnvironmentType.Forest, forestEnvironmentPrefab },
+            { EnvironmentType.Desert, desertEnvironmentPrefab }
         };
 
         enemyDict = new()
         {
-            { "Forest", enemyForestPrefab },
-            { "Desert", enemyDesertPrefab }
+            { EnvironmentType.Forest, enemyForestPrefab },
+            { EnvironmentType.Desert, enemyDesertPrefab }
         };
     }
 
     /// <summary>
     /// Loads the selected environment and finds spawn point.
     /// </summary>
-    public void LoadEnvironment(string environmentKey, System.Action onLoadedCallback)
+    public void LoadEnvironment(EnvironmentType environmentType, System.Action onLoadedCallback)
     {
-        if (!envDict.ContainsKey(environmentKey))
+        if (!envDict.ContainsKey(environmentType))
         {
-            Debug.LogWarning($"No environment found for key: {environmentKey}");
+            Debug.LogWarning($"No environment found for key: {environmentType}");
             return;
         }
 
-        envDict[environmentKey].InstantiateAsync().Completed += (handle) =>
+        envDict[environmentType].InstantiateAsync().Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
@@ -79,11 +79,11 @@ public class AddressablesManager : MonoBehaviour
     /// <summary>
     /// Loads and spawns the enemy at the previously found spawn point.
     /// </summary>
-    public void LoadEnemy(string environmentKey)
+    public void LoadEnemy(EnvironmentType environmentType)
     {
-        if (!enemyDict.ContainsKey(environmentKey))
+        if (!enemyDict.ContainsKey(environmentType))
         {
-            Debug.LogWarning($"No enemy found for key: {environmentKey}");
+            Debug.LogWarning($"No enemy found for key: {environmentType}");
             return;
         }
 
@@ -93,7 +93,7 @@ public class AddressablesManager : MonoBehaviour
             return;
         }
 
-        enemyDict[environmentKey].InstantiateAsync(currentEnemySpawnPoint.position, Quaternion.identity).Completed += (handle) =>
+        enemyDict[environmentType].InstantiateAsync(currentEnemySpawnPoint.position, Quaternion.identity).Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
@@ -108,3 +108,11 @@ public class AddressablesManager : MonoBehaviour
     }
 
 }
+public enum EnvironmentType
+{
+    Forest,
+    Desert
+
+}
+
+
